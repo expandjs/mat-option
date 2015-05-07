@@ -34,10 +34,5 @@
     "xp-pressed-state": "ExpandJS/xp-pressed-state",
     "xp-targeter": "ExpandJS/xp-targeter",
     "polymer": "Polymer/polymer#^0.5"
-  },
-  "devDependencies": {
-    "mat-demo": "ExpandJS/mat-demo",
-    "mat-menu": "ExpandJS/mat-menu",
-    "mat-menu-button": "ExpandJS/mat-menu-button"
   }
 }
