@@ -44,7 +44,7 @@ If can be used in conjunction with mat-dropdown or mat-menu.
 <link rel="import" href="../xp-pressed-state/xp-pressed-state.html">
 <link rel="import" href="../xp-targeter/xp-targeter.html">
 
-<polymer-element name="mat-option" constructor="MATOptionElement" attributes="active data disabled download empty focused href icon iconSrc inset invokes label pressed rel secondaryIcon secondaryIconSrc secondaryText target toggleable value">
+<polymer-element name="mat-option" constructor="MATOptionElement" attributes="active data disabled download empty focused href icon iconSrc inset label pressed rel secondaryIcon secondaryIconSrc secondaryText target toggleable value">
 
     <template>
         <link rel="stylesheet" href="../xp-pressed-state/xp-pressed-state.css">
@@ -112,7 +112,7 @@ If can be used in conjunction with mat-dropdown or mat-menu.
         <template context="{{}}" is="xp-anchor-state" id="xpAnchorState" anchor="{{$.matOptionAnchor}}" download="{{download}}" href="{{href}}" rel="{{rel}}" target="{{target}}"></template>
         <template context="{{}}" is="xp-disabled-state" id="xpDisabledState" disabled="{{disabled}}"></template>
         <template context="{{}}" is="xp-focused-state" id="xpFocusedState" disabled="{{disabled}}" focused="{{focused}}"></template>
-        <template context="{{}}" is="xp-pressed-state" id="xpPressedState" active="{{active}}" disabled="{{disabled}}" invokes="{{invokes}}" pressed="{{pressed}}" target="{{target}}" toggleable="{{toggleable}}"></template>
+        <template context="{{}}" is="xp-pressed-state" id="xpPressedState" active="{{active}}" disabled="{{disabled}}" pressed="{{pressed}}" target="{{target}}" toggleable="{{toggleable}}"></template>
         <mat-ink id="matOptionWrapper" disabled="{{disabled}}">
             <a id="matOptionAnchor">
                 <div id="matOptionMain" horizontal layout center>
@@ -150,7 +150,6 @@ If can be used in conjunction with mat-dropdown or mat-menu.
              * @event xp-activate
              * @param {Element} firer
              * @param {Element} target
-             * @param {string} invokes
              * @param {boolean} isActive
              * @bubbles
              * @cancelable
@@ -257,15 +256,6 @@ If can be used in conjunction with mat-dropdown or mat-menu.
                  * @readonly
                  */
                 inset: {reflect: true, value: false},
-
-                /**
-                 * The target's method to invoke on press.
-                 *
-                 * @attribute invokes
-                 * @type string
-                 * @default "toggle"
-                 */
-                invokes: {reflect: true, value: 'toggle'},
 
                 /**
                  * The option's label.
