@@ -112,11 +112,11 @@ If can be used in conjunction with mat-dropdown or mat-menu.
         <mat-ink id="matOptionWrapper" disabled="{{disabled}}">
             <a id="matOptionAnchor">
                 <div id="matOptionMain" horizontal layout center>
-                    <template if="{{icon || iconSrc || toggleable}}"><mat-icon id="matOptionIcon" name="{{!toggleable ? icon : (active ? 'navigation:check' : '')}}" src="{{!toggleable ? iconSrc : ''}}"></mat-icon></template>
+                    <template if="{{icon || iconSrc || toggleable}}"><mat-icon id="matOptionIcon" disabled="{{disabled}}" name="{{!toggleable ? icon : (active ? 'navigation:check' : '')}}" src="{{!toggleable ? iconSrc : ''}}"></mat-icon></template>
                     <div id="matOptionLabel">{{label || value}}</div>
                     <div flex></div>
                     <div id="matOptionSecondaryText" hidden?="{{!secondaryText || secondaryIcon || secondaryIconSrc}}">{{secondaryText}}</div>
-                    <template if="{{secondaryIcon || secondaryIconSrc}}"><mat-icon id="matOptionSecondaryIcon" name="{{secondaryIcon}}" opacity="hint" src="{{secondaryIconSrc}}"></mat-icon></template>
+                    <template if="{{secondaryIcon || secondaryIconSrc}}"><mat-icon id="matOptionSecondaryIcon" disabled="{{disabled}}" name="{{secondaryIcon}}" opacity="hint" src="{{secondaryIconSrc}}"></mat-icon></template>
                 </div>
             </a>
             <mat-ripple context="{{}}" id="matOptionRipple" style="pointer-events: none"></mat-ripple>
