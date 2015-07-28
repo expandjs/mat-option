@@ -111,20 +111,6 @@ The option's text `color` can be changed accordingly to the
 <link rel="import" href="../xp-pressed-behavior/xp-pressed-behavior.html">
 <link rel="import" href="../xp-referral-behavior/xp-referral-behavior.html">
 
-<style>
-    html [cascade] mat-option {
-        height: 32px;
-    }
-
-    html [cascade] mat-option #matOptionMain {
-        padding: 0 24px;
-    }
-
-    html [cascade] mat-option #matOptionIcon {
-        margin-right: 16px;
-    }
-</style>
-
 <dom-module id="mat-option">
 
     <link rel="import" type="css" href="../xp-pressed-behavior/xp-pressed-behavior.css">
@@ -139,6 +125,10 @@ The option's text `color` can be changed accordingly to the
             white-space: nowrap !important; /* override */
         }
 
+        :host-context([cascade]) {
+            height: 32px;
+        }
+
         :host #matOptionWrapper,
         :host #matOptionMain {
             height: 100%;
@@ -147,6 +137,10 @@ The option's text `color` can be changed accordingly to the
         :host #matOptionMain {
             @apply(--layout-horizontal);
             @apply(--layout-center);
+        }
+
+        :host-context([cascade]) #matOptionMain {
+            padding: 0 24px;
         }
 
         :host #matOptionAnchor {
@@ -167,6 +161,10 @@ The option's text `color` can be changed accordingly to the
 
         :host #matOptionIcon {
             margin-right: 24px;
+        }
+
+        :host-context([cascade]) #matOptionIcon {
+            margin-right: 16px;
         }
 
         :host #matOptionIcon[empty] {
