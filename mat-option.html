@@ -7,8 +7,77 @@ The complete set of contributors may be found at https://expandjs.github.io/CONT
 -->
 
 <!--
-This element is used to display a material option.
-If can be used in conjunction with mat-dropdown or mat-menu.
+An element used to display a [Material Design menu option]().
+
+It can be used in conjunction with
+[mat-dropdown](http://expandjs.com/elements/mat-dropdown) or
+[mat-menu](http://expandjs.com/elements/mat-menu)
+
+```html
+<mat-menu>
+    <mat-option label="First option">
+    <mat-option label="First option">
+</mat-menu>
+```
+
+The option can be used to toggle other elements...
+
+```html
+<mat-option label="Show dialog" target="myDialog"></mat-option>
+
+<mat-dialog id="myDialog">...</mat-dialog>
+```
+
+...link to external resources...
+
+```html
+<mat-option label="ExpandJS" href="http://expandjs.com" target="_blank"></mat-option>
+```
+
+...or do custom actions via listeners.
+
+```html
+<mat-option id="myOption" label="Action"></mat-option>
+
+<script>
+    (function () {
+        var option = XP.getElementById('myOption');
+
+        XP.listen(option, 'xp-activate', function (event) {
+            console.log("I've been clicked!");
+        });
+    }());
+</script>
+```
+
+It can also be `toggleable`, showing a check on `active` state.
+
+```html
+<mat-menu>
+    <mat-option label="Click me" toggleable>
+</mat-menu>
+```
+
+You can customize the option by setting `icon`, `secondary-icon` and `secondary-text`.
+
+```html
+<mat-menu>
+    <mat-option label="Copy" icon="content:content-copy" secondary-text="Ctrl + C">
+    <mat-option label="Paste" icon="content:content-paste" secondary-text="Ctrl + V">
+    <mat-option label="More" secondary-icon="av:play-arrow">
+</mat-menu>
+```
+
+---
+
+## Styling
+
+The option's text `color` can be changed accordingly to the
+[Material Design palette](http://www.google.com/design/spec/style/color.html#color-color-palette).
+
+```html
+<mat-option label="Green" color="green"></mat-option>
+```
 
 @element mat-option
 @description A custom element used to display a Material Design option
