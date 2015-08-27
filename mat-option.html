@@ -113,76 +113,75 @@ The option's text `color` can be changed accordingly to the
 
 <dom-module id="mat-option">
 
-    <link rel="import" type="css" href="../xp-pressed-behavior/xp-pressed-behavior.css">
-
-    <style>
-        :host {
-            @apply(--mat-font-subhead);
-            display: block;
-            height: 48px;
-            text-align: left;
-            text-overflow: ellipsis !important; /* override */
-            white-space: nowrap !important; /* override */
-        }
-
-        :host-context([cascade]) {
-            height: 32px;
-        }
-
-        :host #matOptionWrapper,
-        :host #matOptionMain {
-            height: 100%;
-        }
-
-        :host #matOptionMain {
-            @apply(--layout-horizontal);
-            @apply(--layout-center);
-        }
-
-        :host-context([cascade]) #matOptionMain {
-            padding: 0 24px;
-        }
-
-        :host #matOptionAnchor {
-            display: block;
-            height: 100%;
-            outline: 0;
-            overflow: hidden;
-            text-decoration: none;
-        }
-
-        :host #matOptionAnchor[href]:hover {
-            text-decoration: underline;
-        }
-
-        :host #matOptionMain {
-            padding: 0 16px;
-        }
-
-        :host #matOptionIcon {
-            margin-right: 24px;
-        }
-
-        :host-context([cascade]) #matOptionIcon {
-            margin-right: 16px;
-        }
-
-        :host #matOptionIcon[empty] {
-            display: block !important;
-            opacity: 0 !important;
-            visibility: hidden !important;
-        }
-
-        :host #matOptionLabel {
-            overflow: hidden;
-        }
-
-        :host #matOptionSpacer {
-            @apply(--layout-flex);
-        }
-    </style>
-
     <template>
+
+        <style include="xp-pressed-styles">
+            :host {
+                @apply(--mat-font-subhead);
+                display: block;
+                height: 48px;
+                text-align: left;
+                text-overflow: ellipsis !important; /* override */
+                white-space: nowrap !important; /* override */
+            }
+
+            :host-context([cascade]) {
+                height: 32px;
+            }
+
+            :host #matOptionWrapper,
+            :host #matOptionMain {
+                height: 100%;
+            }
+
+            :host #matOptionMain {
+                @apply(--layout-horizontal);
+                @apply(--layout-center);
+            }
+
+            :host-context([cascade]) #matOptionMain {
+                padding: 0 24px;
+            }
+
+            :host #matOptionAnchor {
+                display: block;
+                height: 100%;
+                outline: 0;
+                overflow: hidden;
+                text-decoration: none;
+            }
+
+            :host #matOptionAnchor[href]:hover {
+                text-decoration: underline;
+            }
+
+            :host #matOptionMain {
+                padding: 0 16px;
+            }
+
+            :host #matOptionIcon {
+                margin-right: 24px;
+            }
+
+            :host-context([cascade]) #matOptionIcon {
+                margin-right: 16px;
+            }
+
+            :host #matOptionIcon[empty] {
+                display: block !important;
+                opacity: 0 !important;
+                visibility: hidden !important;
+            }
+
+            :host #matOptionLabel {
+                overflow: hidden;
+            }
+
+            :host #matOptionSpacer {
+                @apply(--layout-flex);
+            }
+        </style>
+
         <mat-ink id="matOptionWrapper" disabled="[[disabled]]">
             <a id="matOptionAnchor" tabindex="-1">
                 <div id="matOptionMain">
@@ -195,6 +194,7 @@ The option's text `color` can be changed accordingly to the
             </a>
             <mat-ripple context="[[self]]" id="matOptionRipple"></mat-ripple>
         </mat-ink>
+
     </template>
 
     <script>
