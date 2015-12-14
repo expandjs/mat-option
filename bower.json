@@ -1,9 +1,9 @@
 {
   "name": "mat-option",
   "license": "BSD-3-Clause",
-  "version": "0.9.11",
+  "version": "0.10.0",
   "main": "mat-option.html",
-  "description": "A custom element used to display a Material Design option",
+  "description": "A custom element used to display a Material Design menu option",
   "homepage": "http://expandjs.com/elements/mat-option",
   "authors": [
     "Giuliano Rullo <g.rullo@expandjs.com>",
@@ -12,25 +12,26 @@
   ],
   "keywords": [
     "material design",
-    "material menu option",
     "material menu",
-    "web app",
-    "html5",
+    "material dropdown",
     "expandjs",
+    "web app",
+    "custom elements",
     "web-components"
   ],
   "ignore": [
     "**/.*"
   ],
   "dependencies": {
-    "expandjs": "ExpandJS/expandjs#0.9.11",
-    "mat-icon": "ExpandJS/mat-icon#0.9.11",
-    "mat-icons": "ExpandJS/mat-icons#0.9.11",
-    "mat-ink": "ExpandJS/mat-ink#0.9.11",
-    "mat-ripple": "ExpandJS/mat-ripple#0.9.11",
-    "xp-anchor-behavior": "ExpandJS/xp-anchor-behavior#0.9.11",
-    "xp-pressed-behavior": "ExpandJS/xp-pressed-behavior#0.9.11",
-    "xp-referral-behavior": "ExpandJS/xp-referral-behavior#0.9.11",
-    "polymer": "Polymer/polymer#^1.0.0"
+    "expandjs": "ExpandJS/expandjs#0.10.0",
+    "mat-icon": "ExpandJS/mat-icon#0.10.0",
+    "mat-icons": "ExpandJS/mat-icons#0.10.0",
+    "mat-ink": "ExpandJS/mat-ink#0.10.0",
+    "mat-pressed-behavior": "ExpandJS/mat-pressed-behavior#0.10.0",
+    "mat-typography": "ExpandJS/mat-typography#0.10.0",
+    "xp-anchor-behavior": "ExpandJS/xp-anchor-behavior#0.10.0",
+    "xp-overlay": "ExpandJS/xp-overlay#0.10.0",
+    "polymer": "Polymer/polymer#^1.0.0",
+    "iron-flex-layout": "PolymerElements/iron-flex-layout#^1.0.0"
   }
 }
