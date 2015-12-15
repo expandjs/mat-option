@@ -77,7 +77,7 @@ The option's text `color` can be changed accordingly to the
 
 @behavior xp-anchor-behavior /bower_components/xp-anchor-behavior/xp-anchor-behavior.html
 @behavior xp-overlay-injector /bower_components/xp-overlay/xp-overlay-injector.html
-@behavior mat-pressed-behavior /bower_components/mat-pressed-behavior/mat-pressed-behavior.html
+@behavior mat-pressed-ink-behavior /bower_components/mat-pressed-behavior/mat-pressed-ink-behavior.html
 
 @dependency polymer Polymer/polymer#^1.0.0
 @dependency expandjs ExpandJS/expandjs#0.10.0
@@ -97,8 +97,8 @@ The option's text `color` can be changed accordingly to the
 <link rel="import" href="../mat-icon/mat-icon.html">
 <link rel="import" href="../mat-icons/mat-icons.html">
 <link rel="import" href="../mat-ink/mat-ink.html">
-<link rel="import" href="../mat-pressed-behavior/mat-pressed-behavior.html">
-<link rel="import" href="../mat-pressed-behavior/mat-pressed-styles.html">
+<link rel="import" href="../mat-pressed-behavior/mat-pressed-ink-behavior.html">
+<link rel="import" href="../mat-pressed-behavior/mat-pressed-ink-styles.html">
 <link rel="import" href="../mat-typography/mat-typography.html">
 <link rel="import" href="../xp-anchor-behavior/xp-anchor-behavior.html">
 <link rel="import" href="../xp-anchor-behavior/xp-anchor-styles.html">
@@ -109,7 +109,7 @@ The option's text `color` can be changed accordingly to the
     <template strip-whitespace>
 
         <style include="xp-anchor-styles"></style>
-        <style include="mat-pressed-styles"></style>
+        <style include="mat-pressed-ink-styles"></style>
 
         <style>
             :host {
@@ -126,6 +126,7 @@ The option's text `color` can be changed accordingly to the
             :host .main {
                 @apply(--layout-horizontal);
                 @apply(--layout-center);
+                box-sizing: border-box;
                 height: 100%;
                 padding: 0 16px;
                 pointer-events: none !important;
@@ -187,8 +188,8 @@ The option's text `color` can be changed accordingly to the
 
         <a class="anchor" tabindex="-1" on-click="_anchorHandler">
             <div class="main">
-                <mat-icon class="primary icon" disabled="[[disabled]]" name="[[icon]]" src="[[iconSrc]]"></mat-icon>
-                <mat-ink class="label" disabled="[[disabled]]" opacity="[[_computeOpacity(hint)]]">[[_computeLabel(label, value)]]</mat-ink>
+                <mat-icon class="primary icon" color="[[color]]" disabled="[[disabled]]" name="[[icon]]" src="[[iconSrc]]"></mat-icon>
+                <mat-ink class="label" color="[[color]]" disabled="[[disabled]]" opacity="[[_computeOpacity(hint)]]">[[_computeLabel(label, value)]]</mat-ink>
                 <div class="spacer"></div>
                 <mat-ink class="keystroke" disabled="[[disabled]]">[[keystroke]]</mat-ink>
                 <mat-icon class="arrow icon" disabled="[[disabled]]" name="mat:arrow-drop-down" opacity="hint"></mat-icon>
@@ -210,7 +211,7 @@ The option's text `color` can be changed accordingly to the
             behaviors: [
                 Polymer.XPAnchorBehavior,
                 Polymer.XPOverlayInjector,
-                Polymer.MatPressedBehavior
+                Polymer.MatPressedInkBehavior
             ],
 
             /*********************************************************************/
