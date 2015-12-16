@@ -116,6 +116,7 @@ The option's text `color` can be changed accordingly to the
                 @apply(--mat-font-subhead);
                 display: block;
                 height: 48px;
+                overflow: hidden;
                 text-align: left;
             }
 
@@ -128,6 +129,7 @@ The option's text `color` can be changed accordingly to the
                 @apply(--layout-center);
                 box-sizing: border-box;
                 height: 100%;
+                overflow: hidden;
                 padding: 0 16px;
                 pointer-events: none !important;
             }
@@ -177,7 +179,6 @@ The option's text `color` can be changed accordingly to the
             }
 
             :host([arrow="right"]) .arrow {
-                -webkit-transform: rotate(-90deg);
                 transform: rotate(-90deg);
             }
 
