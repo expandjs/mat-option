@@ -157,8 +157,12 @@ The option's text `color` can be changed accordingly to the
             :host .label,
             :host .keystroke {
                 overflow: hidden;
-                text-overflow: ellipsis !important;
-                white-space: nowrap !important;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            :host([bold]) .label {
+                font-weight: bold;
             }
 
             :host .spacer {
@@ -234,6 +238,19 @@ The option's text `color` can be changed accordingly to the
                 arrow: {
                     reflectToAttribute: true,
                     type: String
+                },
+
+                /**
+                 * If set to true, the label is displayed with bold weight.
+                 *
+                 * @attribute bold
+                 * @type boolean
+                 * @default false
+                 */
+                bold: {
+                    reflectToAttribute: true,
+                    type: Boolean,
+                    value: false
                 },
 
                 /**
